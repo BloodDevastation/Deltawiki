@@ -69,6 +69,8 @@ function alternarCicloWingdings() {
     
     if (wingdingsAtivos) {
         gerenciarWingdings();
+        // Limpa o anterior antes de criar um novo para não duplicar
+        clearInterval(intervaloMutacao);
         intervaloMutacao = setInterval(gerenciarWingdings, 800);
     } else {
         clearInterval(intervaloMutacao);
@@ -109,5 +111,22 @@ gerenciarElementosVisuais();
 inicializarAudioEstranho();
 
 intervaloMutacao = setInterval(gerenciarWingdings, 800);
-setInterval(alternarCicloWingdings, 5000);
-setInterval(alternarCicloFoto, 5000);
+
+let tempoAtual = 300; 
+
+function loopDoSusto() {
+    setTimeout(() => {
+        alternarCicloWingdings();
+        alternarCicloFoto();
+
+        if (fotoBugada) {
+            tempoAtual = 3500; 
+        } else {
+            tempoAtual = 1000; 
+        }
+      
+        loopDoSusto();
+    }, tempoAtual);
+}
+
+loopDoSusto();
