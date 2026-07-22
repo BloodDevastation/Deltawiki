@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #111111; 
+    border: 3px solid #9df2f2; 
+    border-radius: 24px; 
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.perfil-topo {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.foto-grande {
+    width: 120px;
+    height: 150px;
+    border: 2px solid #9df2f2;
+    border-radius: 12px;
+    background-color: #222222;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.item-lista {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.foto-pequena {
+    width: 50px;
+    height: 70px;
+    border: 2px solid #9df2f2; 
+    border-radius: 8px;
+    background-color: #222222;
+    flex-shrink: 0;
+}
+
+.texto-lista {
+    flex: 1;
+}
+
+h1 {
+    font-size: 22px;
+    color: #9df2f2; 
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 14px;
+    color: #aaaaaa; 
+    line-height: 1.4;
+}
+
+.wingdings-mutante {
+    color: #9df2f2; 
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #1a1a1a;
+    padding: 0 4px;
+    border-radius: 4px;
+}
